@@ -1,0 +1,40 @@
+### Q2: Build & Train a Reward Model
+**🎯 Goal**: Capture your preferences in code.
+
+---
+
+#### ✅ Steps Followed
+
+1. **Picked 5 prompts**  
+   e.g., short stories, definitions, jokes, summaries, explanations
+
+2. **Generated 4 candidate answers per prompt**  
+   Used base model with `num_return_sequences=4`
+
+3. **Ranked answers manually**  
+   Created `answers.csv` in format:  
+   `prompt,answer,rank`  
+   Rank values: `1` (best) to `4` (worst)
+
+4. **Trained a reward model**  
+   Used HuggingFace `trl`  
+   Model: `RewardTrainer`  
+   Steps: 100
+
+5. **Evaluated model**  
+   Passed a new set of prompt-answer pairs  
+   Used model to assign reward scores
+
+6. **Verified correlation**  
+   Higher reward scores matched better-ranked answers
+
+---
+
+#### 📦 Files Included
+
+- `answers.csv`: Manual rankings  
+- `reward_model/`: Saved model directory  
+- `analyse.ipynb`: Analysis, reward plots  
+- `summary.md`: Summary of process and observations
+
+---
