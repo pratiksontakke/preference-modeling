@@ -1,3 +1,8 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
 ### Q2: Build & Train a Reward Model
 **🎯 Goal**: Capture your preferences in code.
 
